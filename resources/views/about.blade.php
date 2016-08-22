@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>The About Page Goes Here</h1>
+    <class>The About Page Goes Here</class>
 
 @stop
 
