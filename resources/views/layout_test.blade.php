@@ -4,18 +4,22 @@
 
     <head>
 
-      <meta charset="UTF-8">
+        <meta charset="UTF-8">
 
-      <title>Document</title>
+        <title>Document</title>
 
-      <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link href='{{ asset('css/style.css') }}' rel='stylesheet'>
 
+
+        @yield('header')
 
     </head>
 
     <body>
 
         @yield('content')
+
+        @yield('footer')
 
     </body>
 
