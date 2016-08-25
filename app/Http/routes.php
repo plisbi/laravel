@@ -13,6 +13,7 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
+Route::get('vueex', 'PagesController@vueex');
 
 
 //Route::get('/', 'WelcomeController@index');

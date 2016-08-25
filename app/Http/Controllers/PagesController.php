@@ -11,9 +11,16 @@ class PagesController extends Controller {
         return view('welcome_test')->withPeople($people);
     }
 
-    public function about()
-    {
+    public function about(){
         return view('about');
     }
+
+    public function vueex(){
+
+        return view('vueex');
+
+    }
+
+
 
 }
