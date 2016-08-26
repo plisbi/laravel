@@ -10,7 +10,7 @@
 
     <div id="app">
 
-        <form action="">
+        <form action="{{ action('PagesController@about') }}" v-on:submit = "handleIt">
             <span class="error" v-if="!message">
                 You must enter a message
             </span>
@@ -31,19 +31,28 @@
 
         </pre>
 
-        {{--<a href="@{{ action('PagesController@about') }}">--}}
-        <a href="@{{ url('/about') }}">
-            Send Message
+        <a href="{{ action('PagesController@about') }}">
+            Go to about page
         </a>
 
     </div>
 
     <script>
 
+
         new Vue({
             el: '#app',
             data: {
                 message: ''
+            },
+            methods: {
+                handleIt: function(e) {
+
+                    alert('Handled');
+
+                    e.preventDefault();
+
+                }
             }
         })
     </script>

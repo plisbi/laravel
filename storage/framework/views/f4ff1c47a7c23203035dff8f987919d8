@@ -10,16 +10,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
 
-        <link href='{{ asset('css/style.css') }}' rel='stylesheet'>
+        <link href='<?php echo e(asset('css/style.css')); ?>' rel='stylesheet'>
 
-        @yield('header')
+        <?php echo $__env->yieldContent('header'); ?>
 
     </head>
 
     <body>
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
 
-        @yield('footer')
+        <?php echo $__env->yieldContent('footer'); ?>
 
     </body>
 
