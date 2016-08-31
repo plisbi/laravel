@@ -17,13 +17,25 @@ class PagesController extends Controller {
 
     public function vueex(){
 
-        return view('vueex');
+        return view('vue/vueex');
 
     }
 
     public function skills(){
 
-        return view('skills');
+        return view('vue/skills');
+
+    }
+
+    public function plans(){
+
+        return view('vue/plans');
+
+    }
+
+    public function lessons(){
+
+        return view('vue/lessons');
 
     }
 

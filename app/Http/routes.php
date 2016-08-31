@@ -15,6 +15,8 @@ Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
 Route::get('vueex', 'PagesController@vueex');
 Route::get('skills', 'PagesController@skills');
+Route::get('plans', 'PagesController@plans');
+Route::get('lessons', 'PagesController@lessons');
 
 
 Route::get('/welcome', 'WelcomeController@index');
