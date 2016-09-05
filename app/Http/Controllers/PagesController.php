@@ -39,4 +39,11 @@ class PagesController extends Controller {
 
     }
 
+    public function tasks(){
+        //modifyyyy
+        $tasks = \App\Task::latest()->get();
+        return view('vue/tasks', compact('tasks'));
+    }
+
+
 }

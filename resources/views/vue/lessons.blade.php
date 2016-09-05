@@ -42,7 +42,7 @@
             No task yet!
         </p>
 
-        <button @click="clearCompleted">Clear completed</button>
+        <button>Clear completed</button>
     </template>
 
 

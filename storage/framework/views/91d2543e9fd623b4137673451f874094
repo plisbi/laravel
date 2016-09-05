@@ -1,0 +1,19 @@
+<?php $__env->startSection('header'); ?>
+	<title>Task</title>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<h2>My task</h2>
+
+	<ul class="list-group">
+		<?php foreach( $tasks as $task ): ?>
+			<li class="list-group-item">
+				<?php echo e($task->body); ?>
+
+			</li>
+		<?php endforeach; ?>
+	</ul>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout_test', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
