@@ -8,7 +8,7 @@
 
 
 @section('content')
-    <div id="app" class="text-center">
+    <div id="app-skills" class="text-center">
 
         <div class="title">
             <h1>@{{ fullName }}</h1>
@@ -26,7 +26,7 @@
     <script>
 
         new Vue({
-            el:         'body',
+            el:         '#app-skills',
             data:       {
 
                 first:  'Francisco',
@@ -78,5 +78,5 @@
 @stop
 
 @section('footer')
-    {{--<div class="footer" >Footer section</div>--}}
+    <div class="footer" >Footer section</div>
 @stop

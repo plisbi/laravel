@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@welcome_test');
 Route::get('about', 'PagesController@about');
 Route::get('vueex', 'PagesController@vueex');
 Route::get('skills', 'PagesController@skills');

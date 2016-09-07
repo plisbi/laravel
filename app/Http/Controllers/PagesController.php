@@ -4,11 +4,15 @@ use App\Http\Requests;
 
 class PagesController extends Controller {
 
-	public function home(){
+    public function home(){
+        return view('home');
+    }
+
+    public function welcome_test(){
+
         $people = ['FirstPerson','TwoPerson', 'ThirdPerson'];
-
-
         return view('welcome_test')->withPeople($people);
+
     }
 
     public function about(){
@@ -16,27 +20,19 @@ class PagesController extends Controller {
     }
 
     public function vueex(){
-
         return view('vue/vueex');
-
     }
 
     public function skills(){
-
         return view('vue/skills');
-
     }
 
     public function plans(){
-
         return view('vue/plans');
-
     }
 
     public function lessons(){
-
         return view('vue/lessons');
-
     }
 
     public function tasks(){

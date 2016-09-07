@@ -28,7 +28,7 @@
     <template id="counter-template">
 
         <h2>@{{ subject }}</h2>
-        <button class="btn btn-lg btn-success" @click="count +=1">@{{ count  }}</button>
+        <button class="btn btn-lg btn-success" @click="count +=1">@{{ count }}</button>
 
     </template>
 
@@ -46,7 +46,7 @@
 
         });
 
-        new Vue({
+        var about = new Vue({
             el:         '#app',
             methods: {
                 cosa: function () {
@@ -61,7 +61,7 @@
 @stop
 
 @section('footer')
-    {{--<div class="footer" >Footer section</div>--}}
+    <div class="footer">Footer section</div>
 @stop
 
 

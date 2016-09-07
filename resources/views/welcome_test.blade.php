@@ -4,11 +4,11 @@
 
 @section('content')
 
-	<h1>The Welcome Page Goes Here</h1>
+	<h1>First test vue-laravel</h1>
 
 	@unless (empty($people))
 
-		List of people:
+		Make a list of people:
 
 		@foreach ($people as $person)
 

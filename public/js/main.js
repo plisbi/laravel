@@ -2,45 +2,23 @@
  * Created by jvicente on 30/08/2016.
  */
 
-//    ------> tasks
 
-Vue.component('tasksajax',{
+var demo = new Vue({
 
-    template:'#tasks-ajax-template',
+    el: '#main-nav',
 
-    data: function(){
-        return{
-            list: []
-        }
+    data: {
+        active: 'home',
+        examples: ''
     },
 
-    created: function() {
-        this.fechTaskList();
-    },
-    
     methods: {
-        fechTaskList: function(){
-
-            this.$http.get( 'api/tasks_ajax_data', function(ajaxtasks) {
-                console.log(ajaxtasks);
-            });
-
-            // with jquery
-            // $.getJSON('api/tasks_ajax_data', function(ajaxtasks){
-            //     this.list = ajaxtasks;
-            // }.bind(this));
-        },
-
-        delete: function (ajaxtask) {
-            this.list.$remove(ajaxtask);
+        makeActive: function(item){
+            //when a model is changed, the view will be automatically updated
+            this.active = item;
         }
     }
 
-});
-
-
-new Vue({
-    el:'body'
 });
 
 

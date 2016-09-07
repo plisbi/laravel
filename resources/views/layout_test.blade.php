@@ -19,6 +19,24 @@
 
     <body>
 
+        <div id="main-nav">
+
+            <!-- To stops the page from jumping when a link is clicked use the "prevent" modifier (short for preventDefault). -->
+            <nav :class="active" >
+                <!-- When a link in the menu is clicked, we call the makeActive method,
+                     defined in the JavaScript Vue instance. It will change the value of "active". -->
+                <a href="{{ action('PagesController@welcome_test') }}" class="home" @click="makeActive('home')">Home</a>
+                <a href="#" class="vue-examples" @click="makeActive('vue-examples')" @click="show = false" >Vue Examples</a>
+                <a href="#" class="services" @click="makeActive('services')">Services</a>
+                <a href="#" class="contact" @click="makeActive('contact')">Contact</a>
+            </nav>
+
+            <p>
+                Example that the nav works <b>@{{ active }}</b>
+            </p>
+
+        </div>
+
         @yield('content')
 
         @yield('footer')
