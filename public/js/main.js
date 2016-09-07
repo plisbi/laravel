@@ -2,6 +2,73 @@
  * Created by jvicente on 30/08/2016.
  */
 
+//    ------> tasks
+
+Vue.component('tasksajax',{
+
+    template:'#tasks-ajax-template',
+
+    data: function(){
+        return{
+            list: []
+        }
+    },
+
+    created: function() {
+        this.fechTaskList();
+    },
+    
+    methods: {
+        fechTaskList: function(){
+
+            this.$http.get( 'api/tasks_ajax_data', function(ajaxtasks) {
+                console.log(ajaxtasks);
+            });
+
+            // with jquery
+            // $.getJSON('api/tasks_ajax_data', function(ajaxtasks){
+            //     this.list = ajaxtasks;
+            // }.bind(this));
+        },
+
+        delete: function (ajaxtask) {
+            this.list.$remove(ajaxtask);
+        }
+    }
+
+});
+
+
+new Vue({
+    el:'body'
+});
+
+
+/*
+//    ------> tasks
+
+Vue.component('tasks',{
+
+    template:'#tasks-template',
+
+    props: ['list'],
+
+    created: function() {
+        $.getJSON('vue/tasks_ajax',function (data) {
+            console.log(data);
+        })
+    }
+
+});
+
+
+new Vue({
+    el:'body'
+});
+
+
+//    ------> lessons
+
 Vue.component('lss-tasks', {
 
     props: ['list'],
@@ -45,4 +112,8 @@ new Vue({
             {body: 'Do third exercise', completed: true}
         ]
     }
+
+
 });
+
+*/

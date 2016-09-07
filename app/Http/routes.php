@@ -18,6 +18,8 @@ Route::get('skills', 'PagesController@skills');
 Route::get('plans', 'PagesController@plans');
 Route::get('lessons', 'PagesController@lessons');
 Route::get('tasks', 'PagesController@tasks');
+Route::get('tasks_ajax', 'PagesController@tasks_ajax');
+Route::get('api/tasks_ajax_data', 'PagesController@tasks_ajax_data');
 
 Route::get('/welcome', 'WelcomeController@index');
 
