@@ -13,7 +13,7 @@
 
 	<template id="tasks-ajax-template">
 
-		<h2>Ajax tasks there is an issue when you changed from jquery to vue resource</h2>
+		<h2>Ajax tasks </h2>
 
 		<ul class="list-group">
 			<li class="list-group-item" v-for="ajaxtasks in list">
