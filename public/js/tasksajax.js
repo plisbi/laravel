@@ -17,20 +17,24 @@ Vue.component('tasksajax',{
     },
 
     created: function() {
-        this.fechTaskList();
+        this.fetchTaskList();
     },
 
     methods: {
-        fechTaskList: function(){
+        fetchTaskList: function(){
+            // this.$http.get('api/tasks_ajax_data').then(function(ajaxtasks) {
+            //     this.list = ajaxtasks.data; console.log(ajaxtasks.data);
+            // }).bind(this);
 
-            this.$http.get( 'api/tasks_ajax_data', function(ajaxtasks) {
-                console.log(ajaxtasks);
-            });
+            var resource = this.$resource('api/tasks/{id}');
+            resource.get({id:26}).then(
+                (response) => {
+                    // this.list = response.data;
+                    console.log('hey');
+                    alert('hey');
+                }
+            ).bind(this);
 
-            // with jquery
-            // $.getJSON('api/tasks_ajax_data', function(ajaxtasks){
-            //     this.list = ajaxtasks;
-            // }.bind(this));
         },
 
         delete: function (ajaxtask) {

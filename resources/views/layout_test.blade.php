@@ -11,6 +11,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.0/vue-resource.js"></script>
 
+        {{--<script src="https://code.jquery.com/jquery.js"></script>--}}
+
         <link href='{{ asset('css/style.css') }}' rel='stylesheet'>
 
         @yield('header')
@@ -20,7 +22,6 @@
     <body>
 
         <div id="main-nav">
-
             <!-- To stops the page from jumping when a link is clicked use the "prevent" modifier (short for preventDefault). -->
             <nav :class="active" >
                 <!-- When a link in the menu is clicked, we call the makeActive method,
