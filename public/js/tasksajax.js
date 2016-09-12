@@ -22,12 +22,15 @@ Vue.component('tasksajax',{
 
     methods: {
         fetchTaskList: function(){
-            this.$http.get('api/tasks_ajax_data').then(function(ajaxtasks) {
-                this.list = ajaxtasks.data; console.log(ajaxtasks.data);
-            }).bind(this);
-
-            // var resource = this.$resource('api/tasks/{id}');
-            // resource.get({id:26}).then(
+            this.$http.get('api/tasks_ajax_data').then(
+                function(ajaxtasks) {
+                    this.list = ajaxtasks.data;
+                    console.log(ajaxtasks.data);
+                }
+            ).bind(this);
+// Code for referring an id
+            // var resource = this.$resource('api/tasks{/id}');
+            // resource.update({ id:5 },{ body:'Updated task body' }).then(
             //     (response) => {
             //         // this.list = response.data;
             //         console.log('hey');
