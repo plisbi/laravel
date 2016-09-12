@@ -1,0 +1,29 @@
+<?php $__env->startSection('header'); ?>
+	<title>Task</title>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div id="app-tasksajax">
+	<div class="container">
+		<tasksajax> </tasksajax>
+	</div>
+
+	<template id="tasks-ajax-template">
+
+		<h2>Ajax tasks </h2>
+
+		<ul class="list-group">
+			<li class="list-group-item" v-for="ajaxtasks in list">
+				{{ ajaxtasks.body }}
+				<strong @click="delete(ajaxtasks)">X</strong>
+			</li>
+		</ul>
+
+	</template>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footer'); ?>
+	<script src='<?php echo e(asset('js/tasksajax.js')); ?>'></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout_test', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
